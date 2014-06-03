@@ -10,44 +10,44 @@ class PluginDirecti extends RegistrarPlugin implements ICanImportDomains
     function getVariables()
     {
         $variables = array(
-            /*T*/'Plugin Name'/*/T*/ => array (
+            lang('Plugin Name') => array (
                                 'type'          =>'hidden',
-                                'description'   =>/*T*/'How CE sees this plugin (not to be confused with the Signup Name)'/*/T*/,
-                                'value'         =>/*T*/'Directi'/*/T*/
+                                'description'   =>lang('How CE sees this plugin (not to be confused with the Signup Name)'),
+                                'value'         =>lang('Directi')
                                ),
-            /*T*/'Use testing server'/*/T*/ => array(
+            lang('Use testing server') => array(
                                 'type'          =>'yesno',
-                                'description'   =>/*T*/'Select Yes if you wish to use Directi\'s testing environment, so that transactions are not actually made.<br><br><b>Note: </b>You will first need to register for a demo account at<br>http://cp.onlyfordemo.net/servlet/ResellerSignupServlet?&validatenow=false.<br/><br/><span class="notice notice-red"><b>WARNING:</b> ResellerClub has deprecated this version of the API.  Please go to the <a href="index.php?fuse=admin&amp;view=migratedirecti">Directi Migration tool</a> to switch over to the ResellerClub Plugin.</span>'/*/T*/,
+                                'description'   =>lang('Select Yes if you wish to use Directi\'s testing environment, so that transactions are not actually made.<br><br><b>Note: </b>You will first need to register for a demo account at<br>http://cp.onlyfordemo.net/servlet/ResellerSignupServlet?&validatenow=false.<br/><br/><span class="notice notice-red"><b>WARNING:</b> ResellerClub has deprecated this version of the API.  Please go to the <a href="index.php?fuse=admin&amp;view=migratedirecti">Directi Migration tool</a> to switch over to the ResellerClub Plugin.</span>'),
                                 'value'         =>0
                                ),
-            /*T*/'Login'/*/T*/ => array(
+            lang('Login') => array(
                                 'type'          =>'text',
-                                'description'   =>/*T*/'Enter your username for your Directi reseller account.'/*/T*/,
+                                'description'   =>lang('Enter your username for your Directi reseller account.'),
                                 'value'         =>''
                                ),
-            /*T*/'Password'/*/T*/ => array(
+            lang('Password') => array(
                                 'type'          =>'password',
-                                'description'   =>/*T*/'Enter the password for your Directi reseller account.'/*/T*/,
+                                'description'   =>lang('Enter the password for your Directi reseller account.'),
                                 'value'         =>''
                                ),
-            /*T*/'Role'/*/T*/ => array(
+            lang('Role') => array(
                                 'type'          =>'hidden',
-                                'description'   =>/*T*/'Type of account.'/*/T*/,
+                                'description'   =>lang('Type of account.'),
                                 'value'         =>'reseller'
                                ),
-            /*T*/'Language'/*/T*/ => array(
+            lang('Language') => array(
                                 'type'          =>'hidden',
-                                'description'   =>/*T*/'Language preference.'/*/T*/,
+                                'description'   =>lang('Language preference.'),
                                 'value'         =>'en'
                                ),
-            /*T*/'Parent ID'/*/T*/ => array(
+            lang('Parent ID') => array(
                                 'type'          =>'text',
-                                'description'   =>/*T*/'This can be found in your Directi profile.'/*/T*/,
+                                'description'   =>lang('This can be found in your Directi profile.'),
                                 'value'         =>''
                                ),
-            /*T*/'Supported Features'/*/T*/  => array(
+            lang('Supported Features')  => array(
                                 'type'          => 'label',
-                                'description'   => '* './*T*/'TLD Lookup'/*/T*/.'<br>* './*T*/'Domain Registration'/*/T*/.' <br>* './*T*/'Existing Domain Importing'/*/T*/.' <br>* './*T*/'Get Auto Renew Status'/*/T*/.' <br>* './*T*/'Get / Set Nameserver Records'/*/T*/.' <br>* './*T*/'Get / Set Contact Information'/*/T*/.' <br>',
+                                'description'   => '* '.lang('TLD Lookup').'<br>* '.lang('Domain Registration').' <br>* '.lang('Existing Domain Importing').' <br>* '.lang('Get Auto Renew Status').' <br>* '.lang('Get / Set Nameserver Records').' <br>* '.lang('Get / Set Contact Information').' <br>',
                                 'value'         => ''
                                 ),
             'Actions'   => array (
@@ -55,9 +55,9 @@ class PluginDirecti extends RegistrarPlugin implements ICanImportDomains
                                 'description'   => 'Current actions that are active for this plugin (when a domain isn\'t registered',
                                 'value'         => 'Register'
                                 ),
-            /*T*/'Registered Actions'/*/T*/ => array (
+            lang('Registered Actions') => array (
                                 'type'          => 'hidden',
-                                'description'   => /*T*/'Current actions that are active for this plugin (when a domain is registered)'/*/T*/,
+                                'description'   => lang('Current actions that are active for this plugin (when a domain is registered)'),
                                 'value'         => 'Cancel',
                                 )
         );
