@@ -17,7 +17,7 @@ class PluginDirecti extends RegistrarPlugin implements ICanImportDomains
                                ),
             lang('Use testing server') => array(
                                 'type'          =>'yesno',
-                                'description'   =>lang('Select Yes if you wish to use Directi\'s testing environment, so that transactions are not actually made.<br><br><b>Note: </b>You will first need to register for a demo account at<br>http://cp.onlyfordemo.net/servlet/ResellerSignupServlet?&validatenow=false.<br/><br/><span class="notice notice-red"><b>WARNING:</b> ResellerClub has deprecated this version of the API.  Please go to the <a href="index.php?fuse=admin&amp;view=migratedirecti">Directi Migration tool</a> to switch over to the ResellerClub Plugin.</span>'),
+                                'description'   =>lang('Select Yes if you wish to use Directi\'s testing environment, so that transactions are not actually made.<br><br><b>Note: </b>You will first need to register for a demo account at<br>http://cp.onlyfordemo.net/servlet/ResellerSignupServlet?&validatenow=false.<br/><br/><span class="alert alert-danger"><b>WARNING:</b> ResellerClub has deprecated this version of the API.  Please go to the <a href="index.php?fuse=admin&amp;view=migratedirecti">Directi Migration tool</a> to switch over to the ResellerClub Plugin.</span>'),
                                 'value'         =>0
                                ),
             lang('Login') => array(
@@ -95,7 +95,7 @@ class PluginDirecti extends RegistrarPlugin implements ICanImportDomains
         CE_Lib::log(4, 'checkAvailabilityMultiple('.print_r($return,true).')');
 
         if (isset($return[$domain]) && $return[$domain]['status'] === 'available') {
-          $status = 0;  
+          $status = 0;
         } else if (isset($return[$domain]) &&  ($return[$domain]['status'] === 'regthroughus' || $return[$domain]['status'] === 'regthroughothers') ) {
             $status = 1;
         }else {
@@ -105,7 +105,7 @@ class PluginDirecti extends RegistrarPlugin implements ICanImportDomains
 
         $domains = array();
         $domains[] = array("tld"=>$params['tld'],"domain"=>$params['sld'],"status"=>$status);
-        
+
         return $domains;
 
     }
